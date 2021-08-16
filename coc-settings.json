@@ -1,0 +1,11 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": ["css", "ts"],
+
+  "java.configuration.runtimes": [
+    {
+      "name": "Java",
+      "path": "/Users/joelle/.sdkman/candidates/java/current",
+      "default": true
+    }
+  ]
+}

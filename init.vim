@@ -246,7 +246,6 @@ set breakindent
 "Close nvim is only window left is a nerd tree
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-:let g:NERDTreeWinSize=20
 
 
 "jsonc comments

@@ -113,7 +113,7 @@ nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
-nmap <leader>t :NERDTreeTaggle
+nmap <leader>t :NERDTreeToggle<cr>
 
 
 if strftime("%H") < 20 && strftime("%H") > 6

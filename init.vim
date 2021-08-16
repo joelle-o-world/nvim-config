@@ -113,7 +113,6 @@ nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
-nmap <leader>t :NERDTreeToggle<cr>
 
 
 if strftime("%H") < 20 && strftime("%H") > 6
@@ -131,7 +130,7 @@ endif
 :map <Leader>, :vs! ~/.config/nvim/init.vim<CR>
 :map <Leader>j :m+1<CR>
 :map <Leader>k :m-2<CR>
-":map <Leader>t :NERDTree<CR>
+nmap <leader>t :NERDTreeToggle<cr>
 
 "Surround
 vmap ` S`

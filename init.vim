@@ -175,8 +175,6 @@ au BufWrite ~/Documents/vimwiki/????-??-??.wiki :!node ~/programming/plaintext-c
 au BufRead,BufNewFile *.wiki map <Leader>n :put =strftime('@%H:%M')
 
 "Auto commit vimwiki
-"au BufWrite ~/Documents/vimwiki/*.md execute ":cd ~/Documents/vimwiki<cr>: Gw<cr>: !git commit -m "$(git status --short | grep '^[MARCD]'a)"<cr>: cd -"
-
 autocmd BufWrite ~/Documents/vimwiki/*.md call AutoCommitVimwikiChanges()
 function AutoCommitVimwikiChanges()
   cd ~/Documents/vimwiki
@@ -184,6 +182,18 @@ function AutoCommitVimwikiChanges()
   Gw
   :silent !git commit -m "auto commit: $(git status --short | grep '^[MARCD]')"
 endfunction
+
+"Auto commit vim config changes
+autocmd BufWrite ~/.config/nvim/** call AutoCommitVimrcChanges()
+function AutoCommitVimrcChanges()
+  cd ~/.config/nvim
+  "TODO Debug this line
+  Gw
+  !git commit -m "auto commit: $(git status --short | grep '^[MARCD]')"
+  :silent !git push
+endfunction
+
+
 
 map <Leader>w1 :tabnew<cr>:VimwikiMakeTomorrowDiaryNote<cr>:vs<cr>:e ~/Documents/vimwiki/Tasks.md<CR>:rightb vs<cr>:VimwikiMakeDiaryNote<cr>
 

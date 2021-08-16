@@ -224,7 +224,7 @@ nmap § :Goyo<cr>
 map g<space> :exec "!open \"http://google.com/search?q=".expand("<cword>")."\""<cr>
 
 nmap yp :let @" = expand("%:p")<cr>: let @+ = expand("%:p")<cr>
-nmap yl :let @" = join([expand('%'),  line(".")], ':')<cr>:let @+ = join([expand('%'),  line(".")], ':')<cr>
+nmap yl :let @" = join([expand('%:p'),  line(".")], ':')<cr>:let @+ = join([expand('%:p'),  line(".")], ':')<cr>
 
 
 " Use real tab for make files

@@ -61,6 +61,7 @@ let g:sonokai_disable_italic_comment = 1
 
 "Fuzzy finder:
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'preservim/nerdtree'
 "Plug 'nvim-telescope/telescope.nvim'
 
 "Note Taking

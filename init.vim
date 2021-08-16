@@ -102,7 +102,6 @@ Glaive codefmt google_java_executable="java -jar /Users/joelle/lib/google-java-f
 
 "Prettier
 vmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 :au BufWrite *.ts Prettier
 :au BufWrite *.tsx Prettier
@@ -113,6 +112,8 @@ nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+
+nmap <leader>t :NERDTreeTaggle
 
 
 if strftime("%H") < 20 && strftime("%H") > 6

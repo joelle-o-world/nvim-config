@@ -208,7 +208,6 @@ let g:vimwiki_key_mappings = { 'table_mappings': 0 }
                       "\ 'syntax': 'markdown', 'ext': '.md'}]
 
 set nu
-autocmd filetype markdown setlocal nonumber
 syntax enable
 set nocompatible
 filetype plugin on

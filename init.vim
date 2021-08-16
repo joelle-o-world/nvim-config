@@ -189,7 +189,7 @@ function AutoCommitVimrcChanges()
   cd ~/.config/nvim
   "TODO Debug this line
   Gw
-  !git commit -m "auto commit: $(git status --short | grep '^[MARCD]')"
+  :silent !git commit -m "auto commit: $(git status --short | grep '^[MARCD]')"
   :silent !git push
 endfunction
 

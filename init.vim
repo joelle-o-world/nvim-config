@@ -218,7 +218,7 @@ filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|(dist\\\/.+)\|(build\\\/.+)'
-nmap <Alt-p> :CtrlP<CR>
+nmap <A-p> :CtrlP<CR>
 
 
 nmap § :Goyo<cr>

@@ -220,7 +220,7 @@ nmap π :CtrlP<CR>
 
 nmap § :Goyo<cr>
 
-nmap <leader>? o<esc>!!echo"```\n$(~/code/local-zephr-state.sh)\n```"<cr>
+nmap <leader>? o<esc>!!echo "```\n$(~/code/local-zephr-state.sh)\n```"<cr>
 
 map g<space> :exec "!open \"http://google.com/search?q=".expand("<cword>")."\""<cr>
 

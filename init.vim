@@ -179,20 +179,17 @@ au BufRead,BufNewFile *.wiki map <Leader>n :put =strftime('@%H:%M')
 "Auto commit vimwiki
 autocmd BufWrite ~/Documents/vimwiki/*.md call AutoCommitVimwikiChanges()
 function AutoCommitVimwikiChanges()
-  cd ~/Documents/vimwiki
   "TODO Debug this line
   Gw
-  :silent !git commit -m "auto commit: $(git status --short | grep '^[MARCD]')"
+  :silent !(cd ~/Documents/vimwiki && git commit -m "auto commit: $(git status --short | grep '^[MARCD]')")
 endfunction
 
 "Auto commit vim config changes
 autocmd BufWrite ~/.config/nvim/** call AutoCommitVimrcChanges()
 function AutoCommitVimrcChanges()
-  cd ~/.config/nvim
   "TODO Debug this line
   Gw
-  :silent !git commit -m "auto commit: $(git status --short | grep '^[MARCD]')"
-  :silent !git push
+  :silent !(cd ~/.config/nvim && git commit -m "auto commit: $(git status --short | grep '^[MARCD]')" && git push)
 endfunction
 
 

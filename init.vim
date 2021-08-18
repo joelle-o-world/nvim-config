@@ -220,6 +220,8 @@ nmap π :CtrlP<CR>
 
 nmap § :Goyo<cr>
 
+nmap <leader>? !!~/code/local-zephr-state.sh
+
 map g<space> :exec "!open \"http://google.com/search?q=".expand("<cword>")."\""<cr>
 
 nmap yp :let @" = expand("%:p")<cr>: let @+ = expand("%:p")<cr>

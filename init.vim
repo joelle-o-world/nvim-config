@@ -14,7 +14,7 @@ let g:coc_global_extensions = [
   \ 'coc-tsserver'
   \ ]
 Plug 'maksimr/vim-jsbeautify'
-Plug 'jparise/vim-graphql'
+"Plug 'jparise/vim-graphql'
 
 " Stylesheets
 Plug 'gko/vim-coloresque'

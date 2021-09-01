@@ -39,8 +39,9 @@ Plug 'tpope/vim-surround'
 "Graphviz plugin
 Plug 'liuchengxu/graphviz.vim'
 
-"EMOJI
+"emoji
 Plug 'kyuhi/vim-emoji-complete'
+
 "Themes:
 Plug 'sainnhe/sonokai'
 Plug 'dracula/vim', {'as': 'dracula'}

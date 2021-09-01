@@ -41,7 +41,7 @@ Plug 'liuchengxu/graphviz.vim'
 
 "emoji
 Plug 'kyuhi/vim-emoji-complete'
-imap <C-j> <Plug>(emoji-start-complete)
+imap <C-space> <Plug>(emoji-start-complete)
 
 "Themes:
 Plug 'sainnhe/sonokai'

@@ -255,6 +255,25 @@ set breakindent
 
 "jsonc comments
 autocmd FileType json syntax match Comment +\/\/.\+$+
+```
+Thu  2 Sep 2021 17:00:22 BST
+blaize:
+  on branch master
+  111e4abbf Merged in feature/compression-on-origin-requests (pull request #1683)
+
+zephr-plugins-abstractions:
+  on branch post-decision-notifications2
+  0dc1ac6 Fix validation bug
+  M common/ZephrPlugin.ts
+  M plugins/post-decision-notifications/src/header.js
+  M plugins/post-decision-notifications/src/lib.ts
+ ?? common/utils/palette.ts
+  blaize-plugin-mather-listener@0.0.0, chargify@0.0.8, mailchimp@0.0.0, newscorp-google-showcase@0.0.0, post-decision-notifications@0.0.0, stripe@0.0.0, zuora@0.0.0
+zephr-admin-console:
+  on branch master
+  bc6ce39 4.8.191
+```
+
 
 
 

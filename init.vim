@@ -252,6 +252,8 @@ set breakindent
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
+nnoremap Q <Nop>
+
 
 "jsonc comments
 autocmd FileType json syntax match Comment +\/\/.\+$+

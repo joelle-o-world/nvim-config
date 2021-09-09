@@ -180,7 +180,7 @@ au BufNewFile ~/Documents/vimwiki/????-??-??.md :r ~/diary-template.md
 au BufWrite ~/Documents/vimwiki/????-??-??.wiki :!node ~/programming/plaintext-calendar/js/cli.js %
 au BufRead,BufNewFile *.wiki map <Leader>n :put =strftime('@%H:%M')
 
-nmap git :Git 
+nmap git :Git
 
 "Auto commit vimwiki
 autocmd BufWrite ~/Documents/vimwiki/*.md call AutoCommitVimwikiChanges()

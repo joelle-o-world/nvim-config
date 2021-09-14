@@ -92,9 +92,10 @@ Plug 'google/vim-glaive'
 
 call plug#end()
 
+
 "Java
-call glaive#Install()
-Glaive codefmt google_java_executable="java -jar /Users/joelle/lib/google-java-format-1.11.0-all-deps.jar"
+"call glaive#Install()
+"Glaive codefmt google_java_executable="java -jar /Users/joelle/lib/google-java-format-1.11.0-all-deps.jar"
 
 
 " Configure Telescope

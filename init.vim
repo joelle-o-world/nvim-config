@@ -92,6 +92,7 @@ Plug 'google/vim-glaive'
 
 call plug#end()
 
+let g:airline_powerline_fonts = 1
 
 "Java
 "call glaive#Install()

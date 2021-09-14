@@ -121,7 +121,7 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 
 if strftime("%H") < 20 && strftime("%H") > 6
-  colorscheme strawberry-light
+  colorscheme strawberry-dark
 else
   :colo dracula
 endif
@@ -181,6 +181,7 @@ au BufWrite ~/Documents/vimwiki/????-??-??.wiki :!node ~/programming/plaintext-c
 au BufRead,BufNewFile *.wiki map <Leader>n :put =strftime('@%H:%M')
 
 nmap git :Git
+nmap gulp :!gulp
 
 "Auto commit vimwiki
 autocmd BufWrite ~/Documents/vimwiki/*.md call AutoCommitVimwikiChanges()

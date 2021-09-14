@@ -20,7 +20,7 @@ Plug 'maksimr/vim-jsbeautify'
 Plug 'gko/vim-coloresque'
 
 "Git plugins
-"Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 

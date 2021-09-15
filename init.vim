@@ -140,9 +140,8 @@ endif
 :map <Leader>k :m-2<CR>
 nmap <leader>t :NERDTreeToggle<cr>
 
-"Surround
-vmap ` S`
-vmap ' S'
+nmap <C-ScrollWheelUp> <C-x>
+nmap <C-ScrollWheelDown> <C-a>
 
 set mouse=a
 

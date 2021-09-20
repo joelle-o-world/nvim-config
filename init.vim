@@ -184,6 +184,7 @@ au BufRead,BufNewFile *.wiki map <Leader>n :put =strftime('@%H:%M')
 
 nmap git :Git
 nmap gulp :!gulp
+nmap make :!make
 
 "Auto commit vimwiki
 autocmd BufWrite ~/Documents/vimwiki/*.md call AutoCommitVimwikiChanges()

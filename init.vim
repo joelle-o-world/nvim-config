@@ -90,6 +90,9 @@ Plug 'google/vim-glaive'
 "Glaive codefmt plugin[mappings]
 "Glaive codefmt google_java_executable="java -jar /path/to/google-java-format-VERSION-all-deps.jar"
 
+" Jira
+Plug 'paulkass/jira-vim', { 'do': 'pip install -r requirements.txt' }
+
 call plug#end()
 
 let g:airline_powerline_fonts = 1

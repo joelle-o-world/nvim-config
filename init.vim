@@ -92,6 +92,7 @@ Plug 'google/vim-glaive'
 
 " Jira
 "Plug 'paulkass/jira-vim', { 'do': 'pip install -r requirements.txt' }
+Plug 'mnpk/vim-jira-complete'
 
 call plug#end()
 

@@ -93,6 +93,9 @@ Plug 'google/vim-glaive'
 " Jira
 "Plug 'paulkass/jira-vim', { 'do': 'pip install -r requirements.txt' }
 Plug 'mnpk/vim-jira-complete'
+let b:jiracomplete_url = 'https://zephr.atlassian.net/'
+let b:jiracomplete_username = 'joelle.plowright@zephr.com'
+"let b:jiracomplete_password = 'your_jira_password'  " optional
 
 call plug#end()
 

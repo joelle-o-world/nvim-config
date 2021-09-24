@@ -91,7 +91,7 @@ Plug 'google/vim-glaive'
 "Glaive codefmt google_java_executable="java -jar /path/to/google-java-format-VERSION-all-deps.jar"
 
 " Jira
-Plug 'paulkass/jira-vim', { 'do': 'pip install -r requirements.txt' }
+"Plug 'paulkass/jira-vim', { 'do': 'pip install -r requirements.txt' }
 
 call plug#end()
 

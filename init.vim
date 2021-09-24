@@ -96,6 +96,7 @@ Plug 'mnpk/vim-jira-complete'
 let b:jiracomplete_url = 'https://zephr.atlassian.net/'
 let b:jiracomplete_username = 'joelle.plowright@zephr.com'
 "let b:jiracomplete_password = 'your_jira_password'  " optional
+imap <silent> <unique> <leader>j <Plug>JiraComplete
 
 call plug#end()
 

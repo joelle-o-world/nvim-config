@@ -151,7 +151,7 @@ nmap <leader>t :NERDTreeToggle<cr>
 nmap <C-ScrollWheelUp> <C-x>
 nmap <C-ScrollWheelDown> <C-a>
 
-:nmap <Leader>p :CtrlP
+nmap <Leader>p :CtrlP<cr>
 
 set mouse=a
 

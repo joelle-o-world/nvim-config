@@ -151,6 +151,8 @@ nmap <leader>t :NERDTreeToggle<cr>
 nmap <C-ScrollWheelUp> <C-x>
 nmap <C-ScrollWheelDown> <C-a>
 
+:nmap <Leader>p :CtrlP
+
 set mouse=a
 
 " Adding new lines without leaving normal mode

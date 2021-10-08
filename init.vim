@@ -43,6 +43,9 @@ Plug 'liuchengxu/graphviz.vim'
 Plug 'kyuhi/vim-emoji-complete'
 imap <C-j> <Plug>(emoji-start-complete)
 
+"Mustache
+Plugin 'mustache/vim-mustache-handlebars'
+
 "Themes:
 Plug 'sainnhe/sonokai'
 Plug 'dracula/vim', {'as': 'dracula'}

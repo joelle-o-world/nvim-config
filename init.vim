@@ -135,7 +135,7 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 
 if strftime("%H") < 20 && strftime("%H") > 6
-  colorscheme strawberry-light
+  colorscheme PaperColor
 else
   :colo strawberry-dark
 endif

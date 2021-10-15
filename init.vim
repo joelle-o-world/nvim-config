@@ -272,10 +272,10 @@ set breakindent
 
 
 nnoremap Q <Nop>
-nnoremap <up> <Nop>
-nnoremap <down> <Nop>
-nnoremap <left> <Nop>
-nnoremap <right> <Nop>
+"nnoremap <up> <Nop>
+"nnoremap <down> <Nop>
+"nnoremap <left> <Nop>
+"nnoremap <right> <Nop>
 
 
 

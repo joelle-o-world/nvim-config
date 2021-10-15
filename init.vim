@@ -53,6 +53,7 @@ Plug 'reedes/vim-colors-pencil'
 Plug 'wdhg/dragon-energy'
 Plug 'flrnd/plastic.vim'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'nightsense/strawberry'
 " Important!!
 if has('termguicolors')

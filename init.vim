@@ -158,7 +158,7 @@ nmap <C-ScrollWheelDown> <C-a>
 
 nmap <Leader>p :CtrlP<cr>
 
-nmap <Leader>m :set mouse=a<cr>
+set mouse=a<cr>
 
 " Adding new lines without leaving normal mode
 nnoremap <silent> <leader>o :<C-u>call append(line("."),   repeat([""], v:count1))<CR>

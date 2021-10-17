@@ -150,6 +150,7 @@ endif
 :map <Leader>j :m+1<CR>
 :map <Leader>k :m-2<CR>
 nmap <leader>t :NERDTreeToggle<cr>
+nmap <leader><backspace> :Ex<cr>
 
 nmap <C-ScrollWheelUp> <C-x>
 nmap <C-ScrollWheelDown> <C-a>

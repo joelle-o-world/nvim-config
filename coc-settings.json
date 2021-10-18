@@ -1,6 +1,6 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["css", "ts"],
-  "prettier.onlyUseLocalVersion": true
+  "prettier.onlyUseLocalVersion": true,
 
   "java.configuration.runtimes": [
     {

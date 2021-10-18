@@ -1,5 +1,6 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["css", "ts"],
+  "prettier.onlyUseLocalVersion": true
 
   "java.configuration.runtimes": [
     {
@@ -7,5 +8,7 @@
       "path": "/Users/joelle/.sdkman/candidates/java/current",
       "default": true
     }
-  ]
+  ],
+  "clangd.path": "/Users/joelle/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd",
+  "svelte.enable-ts-plugin": true
 }

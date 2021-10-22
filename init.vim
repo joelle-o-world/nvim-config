@@ -125,6 +125,7 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 :au BufWrite *.ts Prettier
 :au BufWrite *.tsx Prettier
 :au BufWrite *.json Prettier
+:au BufWrite *.svelte Prettier
 
 " Using lua functions
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>

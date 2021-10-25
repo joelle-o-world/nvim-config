@@ -16,6 +16,8 @@ let g:coc_global_extensions = [
 Plug 'maksimr/vim-jsbeautify'
 "Plug 'jparise/vim-graphql'
 Plug 'leafOfTree/vim-svelte-plugin'
+Plug 'HerringtonDarkholme/yats.vim'
+
 
 " Stylesheets
 Plug 'gko/vim-coloresque'

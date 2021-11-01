@@ -144,7 +144,7 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
   ":colo corvine
 "endif
 
-"colo corvine_light
+colo corvine_light
 
 ":colo dracula
 ":colo pencil

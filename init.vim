@@ -144,7 +144,7 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
   ":colo corvine
 "endif
 
-colo corvine_light
+colo corvine
 
 ":colo dracula
 ":colo pencil
@@ -177,7 +177,7 @@ nnoremap <silent> <leader>O :<C-u>call append(line(".")-1, repeat([""], v:count1
 "map <right> <nop>
 
 "map <Leader>t :exe 'e ~/notes/'.strftime("%F").'.md'<CR>
-map <Leader>l :colo corvine<cr>
+map <Leader>l :colo corvine_light<cr>
 "map <Leader>@ :e ~/notes/<cword>.md<CR>
 map <Leader>T :e ~/Documents/vimwiki/Tasks.md<CR>
 

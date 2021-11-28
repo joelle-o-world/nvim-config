@@ -1,24 +1,92 @@
+" Joelle's vim config.
+
+
+" -------------------------------------------------------------
+"   General settings
+" -------------------------------------------------------------
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+set shortmess+=c
+set updatetime=300
+set nowritebackup
+set nobackup
+set hidden
+set breakindent
+set linebreak
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
+set omnifunc=syntaxcomplete#Complete
+set nocompatible
+set scrolloff=4
+set mouse=a
+set encoding=UTF-8
+" Allow gf to open non-existent files
+map gf :edit <cfile><cr>
+set nu
+
+" -------------------------------------------------------------
+"   Key bindings
+" -------------------------------------------------------------
+omap ac <Plug>(coc-classobj-a)
+omap ic <Plug>(coc-classobj-i)
+omap af <Plug>(coc-funcobj-a)
+"xmap <silent> <S-TAB> <Plug>(coc-range-select-backword)
+omap if <Plug>(coc-funcobj-i)
+"xmap <silent> <TAB> <Plug>(coc-range-select)
+xmap <silent> <C-s> <Plug>(coc-range-select)
+xmap ac <Plug>(coc-classobj-a)
+xmap ic <Plug>(coc-classobj-i)
+xmap af <Plug>(coc-funcobj-a)
+xmap if <Plug>(coc-funcobj-i)
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <silent> <C-s> <Plug>(coc-range-select)
+nmap <leader>qf  <Plug>(coc-fix-current)
+nmap <leader>ac  <Plug>(coc-codeaction)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>rn <Plug>(coc-rename)
+nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap yl :let @" = join([expand('%:p'),  line(".")], ':')<cr>:let @+ = join([expand('%:p'),  line(".")], ':')<cr>
+nmap yp :let @" = expand("%:p")<cr>: let @+ = expand("%:p")<cr>
+nmap <leader>? o<esc>!!~/code/local-zephr-state.sh<cr>
+nmap § :Goyo<cr>
+nmap π :CtrlP<CR>
+nmap <Leader>zz :e ~/Documents/vimwiki/Zephr.md<cr>
+nmap make :!make
+nmap gulp :!gulp
+nmap git :Git
+nmap <Leader>p :CtrlP<cr>
+nmap <C-ScrollWheelDown> <C-a>
+nmap <C-ScrollWheelUp> <C-x>
+nmap <leader>u :Ex<cr>
+nmap <leader>N :NERDTreeFind<CR>
+
+
+
+" -------------------------------------------------------------
+"   Plugins
+" -------------------------------------------------------------
+
 call plug#begin(stdpath('data') . '/plugged')
 
+"TODO: Install polyglot
 
 "Editor config
 Plug 'editorconfig/editorconfig-vim'
 
 "Typescript / JavaScript
-"Plug 'leafgarland/typescript-vim'
 Plug 'ianks/vim-tsx'
-"Plug 'Quramy/tsuquyomi'
-"Plug 'ycm-core/YouCompleteMe'
 Plug 'neoclide/coc.nvim'
 let g:coc_global_extensions = [
   \ 'coc-tsserver'
   \ ]
 Plug 'maksimr/vim-jsbeautify'
-"Plug 'jparise/vim-graphql'
-"Plug 'leafOfTree/vim-svelte-plugin'
 Plug 'evanleck/vim-svelte'
 Plug 'HerringtonDarkholme/yats.vim'
-
 
 " Stylesheets
 Plug 'gko/vim-coloresque'
@@ -31,8 +99,6 @@ Plug 'tpope/vim-fugitive'
 "Auto commenter
 Plug 'preservim/nerdcommenter'
 
-"File Tree
-"Plug 'preservim/nerdtree'
 
 "Editing mustache templates
 Plug 'mustache/vim-mustache-handlebars'
@@ -46,7 +112,6 @@ Plug 'liuchengxu/graphviz.vim'
 "emoji
 Plug 'kyuhi/vim-emoji-complete'
 imap <C-j> <Plug>(emoji-start-complete)
-
 
 "Themes:
 Plug 'sainnhe/sonokai'
@@ -67,37 +132,26 @@ endif
 let g:sonokai_style = 'espresso'
 let g:sonokai_enable_italic = 1
 let g:sonokai_disable_italic_comment = 1
-
-"Plug 'luffah/vim-accessibility'
-
-"Fuzzy finder:
+" Finding files
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'preservim/nerdtree'
-"Plug 'nvim-telescope/telescope.nvim'
-
-"Note Taking
+Plug 'Xuyuanp/nerdtree-git-plugin'
+" download: https://github.com/ryanoasis/nerd-fonts/releases/tag/v2.1.0
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+nnoremap <expr> <leader>t g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTree<CR>' : ':NERDTreeFind<CR>'
+" Note Taking
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 Plug 'freitass/todo.txt-vim'
 Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-
 "Vim Telescope
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-
-
 " Java
-"How is t
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
-" Optional: Enable codefmt's default mappings on the <Leader>= prefix.
-"Glaive codefmt plugin[mappings]
-"Glaive codefmt google_java_executable="java -jar /path/to/google-java-format-VERSION-all-deps.jar"
-
 " Jira
-"Plug 'paulkass/jira-vim', { 'do': 'pip install -r requirements.txt' }
 Plug 'mnpk/vim-jira-complete'
 let b:jiracomplete_url = 'https://zephr.atlassian.net/'
 let b:jiracomplete_username = 'joelle.plowright@zephr.com'
@@ -108,6 +162,7 @@ call plug#end()
 
 let g:airline_powerline_fonts = 1
 let g:airline_section_b = ""
+
 
 "Java
 "call glaive#Install()
@@ -129,6 +184,7 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 :au BufWrite *.tsx Prettier
 :au BufWrite *.json Prettier
 :au BufWrite *.svelte Prettier
+:au BufWrite *.h call CocAction('format')
 
 " Using lua functions
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
@@ -155,16 +211,14 @@ colo corvine
 :map <Leader>, :vs! ~/.config/nvim/init.vim<CR>
 :map <Leader>j :m+1<CR>
 :map <Leader>k :m-2<CR>
-nmap <leader>t :NERDTreeToggle<cr>
-nmap <leader>u :Ex<cr>
+
+" Reselect visual selction after indenting
+vnoremap < <gv
+vnoremap > >gv
 
 
-nmap <C-ScrollWheelUp> <C-x>
-nmap <C-ScrollWheelDown> <C-a>
 
-nmap <Leader>p :CtrlP<cr>
 
-set mouse=a
 
 " Adding new lines without leaving normal mode
 nnoremap <silent> <leader>o :<C-u>call append(line("."),   repeat([""], v:count1))<CR>
@@ -203,9 +257,6 @@ au BufNewFile ~/Documents/vimwiki/????-??-??.md :r ~/diary-template.md
 au BufWrite ~/Documents/vimwiki/????-??-??.wiki :!node ~/programming/plaintext-calendar/js/cli.js %
 au BufRead,BufNewFile *.wiki map <Leader>n :put =strftime('@%H:%M')
 
-nmap git :Git
-nmap gulp :!gulp
-nmap make :!make
 
 "Auto commit vimwiki
 autocmd BufWrite ~/Documents/vimwiki/*.md call AutoCommitVimwikiChanges()
@@ -237,26 +288,18 @@ let g:vimwiki_key_mappings = { 'table_mappings': 0 }
 "let g:vimwiki_list = [{'path': '~/vimwiki/',
                       "\ 'syntax': 'markdown', 'ext': '.md'}]
 
-set nu
+
 syntax enable
-set nocompatible
 filetype plugin on
 "let g:markdown_fenced_languages = ['coffee', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml', 'html']
 
-set omnifunc=syntaxcomplete#Complete
-set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|(dist\\\/.+)\|(build\\\/.+)'
-nmap π :CtrlP<CR>
 
 
-nmap § :Goyo<cr>
 
-nmap <leader>? o<esc>!!~/code/local-zephr-state.sh<cr>
 
 map g<space> :exec "!open \"http://google.com/search?q=".expand("<cword>")."\""<cr>
 
-nmap yp :let @" = expand("%:p")<cr>: let @+ = expand("%:p")<cr>
-nmap yl :let @" = join([expand('%:p'),  line(".")], ':')<cr>:let @+ = join([expand('%:p'),  line(".")], ':')<cr>
 
 
 " Use real tab for make files
@@ -264,8 +307,6 @@ au BufRead,BufNewFile Makefile,makefile setlocal noexpandtab
 
 
 " Wrapping:
-set linebreak
-set breakindent
 
 " Turn off highlighting for search:
 "set nohlsearch
@@ -312,21 +353,16 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
             "(configuring vim coc)
             "(Mostly copy pasted from their github readme)
 " TextEdit might fail if hidden is not set.
-set hidden
 
 " Some servers have issues with backup files, see #649.
-set nobackup
-set nowritebackup
 
 " Give more space for displaying messages.
 "set cmdheight=2
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
-set updatetime=300
 
 " Don't pass messages to |ins-completion-menu|.
-set shortmess+=c
 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
@@ -365,14 +401,8 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -392,11 +422,8 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
@@ -408,24 +435,12 @@ augroup end
 
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap keys for applying codeAction to the current buffer.
-nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-xmap ic <Plug>(coc-classobj-i)
-omap ic <Plug>(coc-classobj-i)
-xmap ac <Plug>(coc-classobj-a)
-omap ac <Plug>(coc-classobj-a)
 
 " Remap <C-f> and <C-b> for scroll float windows/popups.
 " Note coc#float#scroll works on neovim >= 0.4.3 or vim >= 8.2.0750
@@ -436,8 +451,6 @@ inoremap <nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(
 
 " Use CTRL-S for selections ranges.
 " Requires 'textDocument/selectionRange' support of language server.
-nmap <silent> <C-s> <Plug>(coc-range-select)
-xmap <silent> <C-s> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
@@ -451,7 +464,6 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics.
@@ -479,9 +491,6 @@ autocmd FileType scss setl iskeyword+=@-@
 
 "" Reccomended by CPP/vim-coc setup tutorial
 "" Use <tab> for select selections ranges, needs server support, like: coc-tsserver, coc-python
-"nmap <silent> <TAB> <Plug>(coc-range-select)
-"xmap <silent> <TAB> <Plug>(coc-range-select)
-"xmap <silent> <S-TAB> <Plug>(coc-range-select-backword)
 "
 
 nnoremap <C-J> <C-W><C-J>
